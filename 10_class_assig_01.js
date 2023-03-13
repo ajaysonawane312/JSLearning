@@ -46,7 +46,7 @@ console.log(collegeSvpm);
 
 console.warn(`3.-----------------------------Traverse using for in with one Argument--------------------------------------`);
 
-  function traverseObject(collegeDetails) {
+  function traverseObject(collegeDetails){
     for (const key in collegeDetails) {
       if (Object.hasOwnProperty.call(collegeDetails, key)) {
         const element = collegeDetails[key];
@@ -77,6 +77,8 @@ function chkPrime(n)
 }
 let result = chkPrime(11);
 console.log(`Given Number 11 is: `, result);
+let chkPrimeNo = chkPrime(4);
+console.log(`Given Number 4 is: `, chkPrimeNo);
 // var num = 100;
 // // check for every number from 1 to num
 // for(var i = 1; i <= num; i++)
