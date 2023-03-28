@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise Time!</title>
+    </head>
+    <body>
+        <main>
+            <div id="overview">
+              <h1>HTML & JavaScript are crucial Technologies</h1>
+              <p>The Web would not work without them....</p>
+            </div>
+            <div id="advantages">
+                <ul>
+                    <li>Flexible</li>
+                    <li>Available</li>
+                    <li>Magical</li>
+                </ul>
+            </div>
+        </main>
+        <script>
+            console.log(`------------Store the h1 Element---------------`);
+            const mainHeading = document.querySelector("#overview");
+            const mainHead = document.getElementsByTagName("h1");
+            console.log(mainHead[0].innerHTML);
+
+            console.log(`---------Store the Second li Element-----------`);
+            const secondAdvantage = document.querySelectorAll("li");
+            // const liElement = document.getElementsByClassName("liItem");
+            console.log(secondAdvantage[1].innerHTML);
+
+            console.log(`---------Store the div with the id-------------`);
+            const advDiv = document.querySelector("#advantages");
+            // const advanceDiv = document.querySelectorAll("li")
+            console.log(advDiv.innerHTML);
+
+        </script>
+    </body>
+</html>
