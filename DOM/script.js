@@ -37,3 +37,55 @@ console.log("====== Remove Element =====");
 const elementDivProject = document.querySelector("#divProject");
 const elementProject = document.querySelector("#project");
 elementDivProject.removeChild(elementProject);
+
+console.log("====== Adding Element =====");
+const elementDiv = document.querySelector("#divProject");
+const elementP = document.createElement("p");
+const elementText = document.createTextNode("Team Size - 7");
+elementP.appendChild(elementText);
+elementDiv.appendChild(elementP);
+
+const elementAddress = document.querySelector("#address");
+elementAddress.addEventListener("click", ()=>{
+    console.log(`Listening Click Event..........`);
+    const inputValue = prompt("This is title Page", "Default Value")
+    console.log(inputValue);
+})
+// elementAddress.addEventListener("mouseover", () => {
+//     console.log("Mouse over....");
+// });
+elementAddress.addEventListener("mouseover", () => {
+    console.log("Mouse over....");
+    elementAddress.style.color="red";
+});
+
+function show(){
+    console.log(`Click Event..........`);
+}
+
+const isEvenButton = document.querySelector("#isEvenButton");
+isEvenButton.addEventListener('click',()=>{
+    console.log(`Button Clicked`);
+    const inputValue = prompt('Plz Enter Number to Check', 0)
+    console.log(inputValue);
+    const result = inputValue%2==0 ? true : false;
+    if(result){
+        alert(`Given Number is Even`);
+    }else{
+        alert(`Given Number is ODD`);
+    }
+})
+const isPrimeButton = document.querySelector("#isPrimeButton");
+isPrimeButton.addEventListener('click',()=>{
+    console.log(`Button Clicked`);
+    const value = prompt('Plz Enter Number to Check',0)
+    console.log(value);
+     if(value == 1 || value == 0) 
+    return false;
+    for(var i = 2; i < value; i++)
+    {
+    if(value % i == 0) 
+    alert(`Not Prime Number`);
+    }
+    alert(`Prime Number`);
+})

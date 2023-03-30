@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document Object Model</title>
+        <style>
+            #hobbies{
+                border-radius: 2px;
+                box-shadow: 5px 5px 5px;
+                background-color:aqua;
+                width: 200px;
+                height: fit-content;
+                text-align: center;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: larger;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My Hobbies</h1>
+        <div id="hobbies">
+
+        </div>
+        <button type="submit" id="isHobbies">My Hobbies</button>
+        <script>
+            const hobbies = document.querySelector("#isHobbies");
+            hobbies.addEventListener('click', ()=>{
+            const inputValue = prompt('Plz Enter Hobbies','Hobbies');
+            console.log(inputValue);
+            const isHobbies = document.querySelector("#hobbies");
+            const elementp = document.createElement("p");
+            const elementHobbies = document.createTextNode(inputValue);
+            isHobbies.appendChild(elementp);
+            elementp.appendChild(elementHobbies);
+         })
+        </script>
+    </body>
+</html>
